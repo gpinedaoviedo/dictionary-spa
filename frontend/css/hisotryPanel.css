@@ -1,0 +1,64 @@
+:root{
+    /* Backgrounds */
+    --bg: #F8F7FC;
+    --surface: #FFFFFF;
+    --surface-secondary: #F3F0FF;
+
+    /* Borders */
+    --border: #E5E7EB;
+
+    /* Typography */
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --text-light: #9CA3AF;
+
+    /* Brand */
+    --primary: #7C3AED;
+    --primary-hover: #6D28D9;
+    --primary-light: #EDE9FE;
+    --secondary-hover: #d0c8f1a6;
+
+
+    /* States */
+    --success: #22C55E;
+    --danger: #EF4444;
+}
+
+aside{ 
+    width: 200px; 
+    height: 500px;
+    font-size: 1.1rem;
+    overflow-y: auto;
+    border-right: 1px solid var(--border);
+
+}
+
+#panel-title{
+    color: var(--text-secondary);
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+}
+
+.word-record{
+    margin-top: 5px;
+}
+
+.word-saved{
+    color: var(--primary);
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.word-saved:hover{
+    background-color: var(--primary);
+    color: var(--primary-light);
+    cursor: pointer;
+    transition: .3s;
+}
+
+@media (max-width: 720px) {
+    aside{
+        display: none;
+    }
+}

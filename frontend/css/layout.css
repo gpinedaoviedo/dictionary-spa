@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* colors */
+:root{
+    /* Backgrounds */
+    --bg: #F8F7FC;
+    --surface: #FFFFFF;
+    --surface-secondary: #F3F0FF;
+
+    /* Borders */
+    --border: #E5E7EB;
+
+    /* Typography */
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --text-light: #9CA3AF;
+
+    /* Brand */
+    --primary: #7C3AED;
+    --primary-hover: #6D28D9;
+    --primary-light: #EDE9FE;
+
+    /* States */
+    --success: #22C55E;
+    --danger: #EF4444;
+}
+
+
+body{
+    background-color: var(--bg);
+    color: var(--text)
+}
+
+/*Basic Layaout */
+.layout{ 
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: row;
+    flex: 1;
+}
+
+.hidden{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+@media (max-width: 480px) {
+    .layout{
+        flex-direction: column;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+}

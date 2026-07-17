@@ -1,0 +1,50 @@
+/* colors */
+:root{
+    /* Backgrounds */
+    --bg: #F8F7FC;
+    --surface: #FFFFFF;
+    --surface-secondary: #F3F0FF;
+
+    /* Borders */
+    --border: #E5E7EB;
+
+    /* Typography */
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --text-light: #9CA3AF;
+
+    /* Brand */
+    --primary: #7C3AED;
+    --primary-hover: #6D28D9;
+    --primary-light: #EDE9FE;
+    --secondary-hover: #d0c8f1;
+
+    /* States */
+    --success: #22C55E;
+    --danger: #EF4444;
+}
+
+.error-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 350px;
+    text-align: center;
+}
+
+.error-icon{
+    font-size: 4rem;
+}
+
+.error-title{
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.erroo-description{
+    color: var(--text-secondary);
+    max-width: 420px;
+    line-height: 1.6;
+}

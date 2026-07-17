@@ -1,0 +1,53 @@
+:root{
+    /* Backgrounds */
+    --bg: #F8F7FC;
+    --surface: #FFFFFF;
+    --surface-secondary: #F3F0FF;
+
+    /* Borders */
+    --border: #E5E7EB;
+
+    /* Typography */
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --text-light: #9CA3AF;
+
+    /* Brand */
+    --primary: #7C3AED;
+    --primary-hover: #6D28D9;
+    --primary-light: #EDE9FE;
+    --secondary-hover: #d0c8f1;
+
+
+    /* States */
+    --success: #22C55E;
+    --danger: #EF4444;
+}
+
+.phonetic-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.phonetic-word{
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+#play-btn{
+    background-color: var(--primary);
+    margin-left: 15px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+#play-btn:hover{
+    background-color: var(--primary-hover);
+}
+
+#play-btn img{
+    background-color: white;
+    border-radius: 50%;
+}

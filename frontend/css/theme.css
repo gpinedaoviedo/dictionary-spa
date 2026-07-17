@@ -1,0 +1,68 @@
+/* colors */
+:root{
+    /* Backgrounds */
+    --bg: #F8F7FC;
+    --surface: #FFFFFF;
+    --surface-secondary: #F3F0FF;
+
+    /* Borders */
+    --border: #E5E7EB;
+
+    /* Typography */
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --text-light: #9CA3AF;
+
+    /* Brand */
+    --primary: #7C3AED;
+    --primary-hover: #6D28D9;
+    --primary-light: #EDE9FE;
+    --secondary-hover: #d0c8f1;
+
+    /* States */
+    --success: #22C55E;
+    --danger: #EF4444;
+}
+
+/* dark mode colors*/
+.night-mode{
+    --bg: #111827;
+    --surface: #1F2937;
+    --surface-secondary: #374151;
+    --border: #4B5563;
+    --text: #F9FAFB;
+    --text-secondary: #D1D5DB;
+    --primary: #A78BFA;
+    --primary-hover: #8B5CF6;
+    --primary-light: #312E81;
+}
+
+.mode-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 110px;
+}
+
+#mode-title{
+    align-content: center;
+    margin: 3px 5px;
+    color: var(--text);
+    font-weight: bold;
+}
+
+.btn-mode{
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 13px;
+    margin-right: 10px;
+    border: none;
+}
+
+.btn-mode:hover{ background-color: var(--primary-hover); }
+
+
+
+
+

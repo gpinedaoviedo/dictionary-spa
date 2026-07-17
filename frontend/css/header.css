@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+:root{
+    /* Backgrounds */
+    --bg: #F8F7FC;
+    --surface: #FFFFFF;
+    --surface-secondary: #F3F0FF;
+
+    /* Borders */
+    --border: #E5E7EB;
+
+    /* Typography */
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --text-light: #9CA3AF;
+
+    /* Brand */
+    --primary: #7C3AED;
+    --primary-hover: #6D28D9;
+    --primary-light: #EDE9FE;
+
+    /* States */
+    --success: #22C55E;
+    --danger: #EF4444;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px; 
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+#logo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#logo a{
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    margin-left: 10px;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+#logo a span{ color: var(--text); }
+
+.search-form{
+    display: flex;
+    height: 40px;
+    margin-top: 20px;
+}
+
+#search-btn{
+    border: none;
+    background-color: var(--bg);
+    cursor: pointer;
+    background-color: var(--primary);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 0 5px;
+}
+
+#search-btn:hover{ background-color: var(--primary-hover); }
+#search-btn img{ cursor: pointer; }
+
+.entry{
+    padding: 15px;
+    width: 15rem;
+    color: var(--text);
+    border: 1px var(--border) solid;
+    background-color: var(--surface);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.entry::placeholder{ color: var(--text); }
+.entry:focus-visible, #search-btn:focus-visible{ 
+    outline:1px solid var(--primary);
+    outline-offset:1px; 
+}
+#search-btn, .entry{ box-shadow: 1px 4px 5px #6B7280; }
+
+@media (max-width: 768px) {
+    .search-form{ margin: 15px; }
+}
+
+@media (max-width: 440px) {
+    header{ justify-content: space-around;}
+    .search-form{ margin: 15px auto; }
+    #logo a, #logo a span{ font-size: 2rem; margin: auto; }
+    .mode-container{ align-self: end; }
+}

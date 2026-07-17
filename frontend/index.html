@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/phonetic.css">
+    <link rel="stylesheet" href="./css/meaning.css">
+    <link rel="stylesheet" href="./css/hisotryPanel.css">
+    <link rel="stylesheet" href="./css/theme.css">
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="./css/error.css">
+
+</head>
+<body id="body-id">
+    <header>
+        <h1 id="logo">
+            <a href="/">Dictionary<span>Online</span></a>
+        </h1>
+
+        <form action="" class="search-form" aria-label="Dictionary search">
+            <input 
+                type="text" 
+                class="entry" 
+                placeholder="Search..." 
+                aria-label="Search for an English word" 
+                autocomplete="off">
+
+            <button type="submit" id="search-btn" aria-label="Search"><img src="./assets/lupa-buscar.png" width="30" height="30"></button>
+        </form>
+
+        <div class="mode-container">
+            <!-- boton para cambiar entre light/night -->
+            <p id="mode-title">Night</p>
+            <button class="btn-mode" aria-label="Switch to dark mode">
+                <img src="./assets/luna.png" alt="Mode night" id="mode-icon">
+            </button>
+        </div>  
+    </header>
+
+    <div class="landing">
+        <img src="./assets/landing_img.png" alt="Dictionary landing">
+    </div>
+
+    <div class="layout hidden">
+        <aside id="left-aside" aria-labelledby="panel-title">
+            <h3 id="panel-title">History</h3>
+            <div class="word-record">
+                <ul></ul>
+            </div>
+        </aside>
+        
+        <!-- Meanings -->
+        <main class="dictionary-result">
+            <h2 id="word-searched"></h2>
+            <!-- Phonetic -->
+            <div class="phonetic-container">
+                <span class="phonetic-word"></span>
+                <button id="play-btn" aria-label="Play pronunciation">
+                    <img src="./assets/wondicon-ui-free-speaker_111240.png" width="25" height="25" alt="Play pronunciation">
+                </button>
+            </div>
+            
+            <template id="meaning-template">
+                <section class="meaning-section">
+
+                    <h3 class="partOfSpeech-title"></h3>
+
+                    <div class="meanings-container">
+                        <ol></ol>
+                    </div>
+
+                    <div class="terms-container">
+                        <div class="synonyms">
+                            <p>Synonyms: </p>
+                        </div>
+
+                        <div class="antonyms">
+                            <p>Antonyms: </p>
+                        </div>
+                    </div>
+                    
+                </section>
+            </template>
+
+            <template id="error-template">
+                <section class="error-section" role="alert">
+                    <div class="error-icon"></div>
+
+                    <h2 class="error-title"></h2>
+
+                    <p class="error-description"></p>
+                </section>
+            </template>
+        </main>
+    </div>
+        
+    <!-- footer -->
+    <footer>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

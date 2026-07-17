@@ -1,0 +1,13 @@
+.landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.landing img{
+    width:min(100vw, 650px);
+    height:auto;
+}
