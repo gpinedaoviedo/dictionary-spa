@@ -1,5 +1,5 @@
 import { createDefinitionsItem, createTermsItem } from "../components/meaning.js";
-import { searchWord } from "../services/searchWord.js";
+import { searchWord } from "../helpers/searchWord.js";
 import { capitalize } from "../utils/capitalize.js";
 
 const $result = document.querySelector(".dictionary-result");

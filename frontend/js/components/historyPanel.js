@@ -1,4 +1,4 @@
-import { searchWord } from "../services/searchWord.js";
+import { searchWord } from "../helpers/searchWord.js";
 
 const log = [];
 
