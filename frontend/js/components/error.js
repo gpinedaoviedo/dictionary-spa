@@ -4,9 +4,11 @@ const $result = document.querySelector(".dictionary-result");
 
 export function renderError(word = null){
     const errorTemplate = document.getElementById("error-template").content,
-    clone = document.importNode(errorTemplate, true);
+    clone = document.importNode(errorTemplate, true),
+    phoneticContainer = document.querySelector(".phonetic-container");
 
     // clear previews results
+    phoneticContainer.innerHTML = "";
     $result.querySelectorAll("section").forEach(section => section.remove());    
 
     clone.querySelector(".error-title").textContent = "Word not found";

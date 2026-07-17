@@ -1,4 +1,4 @@
-import { initSearchWord } from "./js/services/searchResult.js";
+import { initSearchWord } from "./js/helpers/searchResult.js";
 import { mode } from "./js/components/theme.js";
 
 history.scrollRestoration = "manual";
