@@ -7,7 +7,7 @@ import os
 load_dotenv()
 api = os.getenv("dictionary_api")
 
-HEADERS = { "User-agent": "DictionarySPA/1.0 (apinedaoviedo@gmail.com)" }
+HEADERS = { "User-agent": "DictionarySPA/1.0 (+https://github.com/gpinedaoviedo/dictionary-spa)" }
 
 def search_word(word: str) -> DictionaryResponse:
     try:
