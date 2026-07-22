@@ -27,7 +27,7 @@ export function mode() {
         } else {
             $body.classList.remove("night-mode");
             $icon.src = `./assets/luna.png`;
-            if ($landing) $landing.src = "./assets/landing_img.png";
+            if ($landing) $landing.src = "./assets/landing_img-light.png";
             $modeTitle.textContent = "Night";
 
         } 
@@ -46,7 +46,7 @@ export function mode() {
                 $icon.src = "./assets/luna.png";
                 localStorage.setItem("mode", "light");
                 $modeTitle.textContent = "Night"
-                if ($landing) $landing.src = "./assets/landing_img.png";
+                if ($landing) $landing.src = "./assets/landing_img-light.png";
             }
             const isDarkMode = document.body.classList.contains("night-mode"); 
             $btn.setAttribute("aria-label", 
