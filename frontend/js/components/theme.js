@@ -13,7 +13,6 @@ export function mode() {
         let mode = "light";
         //validation if localStorage is supported
         try {
-            //defining "light" as value default
             mode = localStorage.getItem("mode") || "light";
         } catch (error) {
             console.log("Error al acceder al localStorage: ", error);
@@ -22,10 +21,15 @@ export function mode() {
         //if - MODE NIGHT, else - MODE LIGHT
         if (mode === "night") {
             $body.classList.add("night-mode");
-            $icon.src = `/Diccionario-spa/frontend/assets/sol.png`;
+            $icon.src = `./assets/sol.png`;
+            if ($landing) $landing.src = "./assets/landing_img-dark.png";
+            $modeTitle.textContent = "Light";
         } else {
             $body.classList.remove("night-mode");
-            $icon.src = `/Diccionario-spa/frontend/assets/luna.png`;
+            $icon.src = `./assets/luna.png`;
+            if ($landing) $landing.src = "./assets/landing_img.png";
+            $modeTitle.textContent = "Night";
+
         } 
     })
 
@@ -33,18 +37,16 @@ export function mode() {
         if (e.target.matches(".btn-mode") || e.target.matches(".btn-mode *")){
             $body.classList.toggle("night-mode");
             if ($body.classList.contains("night-mode")){
-                $modeTitle.textContent = ""
-                $icon.src = "/Diccionario-spa/frontend/assets/sol.png";
+                $icon.src = "./assets/sol.png";
                 localStorage.setItem("mode", "night");
                 $modeTitle.textContent = "Light";
-                $landing.src = "/Diccionario-spa/frontend/assets/landing_img-dark.png";
+                if ($landing) $landing.src = "./assets/landing_img-dark.png";
                 
             } else{
-                $modeTitle.textContent = ""
-                $icon.src = "/Diccionario-spa/frontend/assets/luna.png";
+                $icon.src = "./assets/luna.png";
                 localStorage.setItem("mode", "light");
                 $modeTitle.textContent = "Night"
-                $landing.src = "/Diccionario-spa/frontend/assets/landing_img.png";
+                if ($landing) $landing.src = "./assets/landing_img.png";
             }
             const isDarkMode = document.body.classList.contains("night-mode"); 
             $btn.setAttribute("aria-label", 
