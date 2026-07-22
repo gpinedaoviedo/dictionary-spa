@@ -1,5 +1,7 @@
 export async function getWordData(data) {
-    const API_URL = location.hostname === "localhost" || "127.0.0.1" 
+    const isLocal = ["localhost", "127.0.0.1"].includes(location.hostname);
+
+    const API_URL = isLocal 
         ? "http://127.0.0.1:8000"
         : "https://dictionary-online.onrender.com"
 
