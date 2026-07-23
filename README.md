@@ -117,7 +117,7 @@ Dictionary-spa
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/gpinedaovido/Dictionary-SPA.git
+git clone [https://github.com/gpinedaovido/dictionary-spa.git](https://github.com/gpinedaoviedo/dictionary-spa.git)
 ```
 
 ---
@@ -171,7 +171,7 @@ The backend will be available at:
 
 ```
 localhost: http://127.0.0.1:8000
-production: https://dictionary-online.es.onrender.com
+Render: https://dictionary-online.onrender.com/
 ```
 
 ---
@@ -181,6 +181,8 @@ production: https://dictionary-online.es.onrender.com
 Open
 
 ```
+https://dictionary-spa-gapo.vercel.app/
+https://english-dictionary-online.vercel.app/
 frontend/index.html
 ```
 
